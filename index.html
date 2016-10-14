@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Rock Paper Scissor</title>
+
+	<link rel = "icon" type = "image/ico" href = "assets/images/scissor1.ico">
+
+	<script type = "text/javascript" scr = "javascript/game.js"></script>
+
+</head>
+<body>
+
+	<div id = "game">
+			
+		<p>Time to Play</p>
+
+	</div>
+
+	<script type="text/javascript">
+		
+/*		var word = ["hi" , "bye" , "hello" , "goodbye"];*/
+		
+		var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+		var word = ["hello"];
+		
+		var dash = [];
+
+		var selection = Math.floor((Math.random(selection) * 1));
+
+		for (var i = word[selection].length - 1; i >= 0; i--) {
+			dash.push("_");	
+		}
+		
+
+		var trafficlight = "g";
+
+		var j = word[0].split("");
+
+
+
+		var i = word.indexOf("e");
+
+		console.log(i);
+
+		console.log(j);
+
+
+/*		
+		while(trafficlight != "r") {
+
+			var user = prompt("Pick A Letter");
+
+			if (alphabet.indexOf(user) == -1) {
+				var user = prompt("Not Valid");
+
+			}
+
+			var i = [];
+			var idx = word.indexOf(user);
+
+			while(idx != -1){
+				i.push(idx);
+				idx = i.indexOf(user , idx + 1);
+			}
+
+			var newdash = dash.join(" ");
+
+			var html = "<p> Play Time</p>" + "<p>Game Board</p>" + newdash;
+
+	 		document.querySelector('#game').innerHTML = html;
+
+	 		trafficlight = prompt("g or r")
+
+	 		console.log(i);
+
+	 	}*/
+
+		console.log(word);
+		console.log(dash);
+		
+
+	</script>
+
+</body>
+</html>
