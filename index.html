@@ -7,7 +7,7 @@
 
 	<link rel = "icon" type = "image/ico" href = "assets/images/scissor1.ico">
 
-	<script type = "text/javascript" scr = "javascript/game.js"></script>
+	<script type = "text/javascript" src = "assets/javascript/game.js"></script>
 
 </head>
 <body>
@@ -22,65 +22,35 @@
 		
 /*		var word = ["hi" , "bye" , "hello" , "goodbye"];*/
 		
-		var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-
+		var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',            'p','q','r','s','t','u','v','w','x','y','z'];
+ 
 		var word = ["hello"];
-		
-		var dash = [];
 
-		var selection = Math.floor((Math.random(selection) * 1));
-
-		for (var i = word[selection].length - 1; i >= 0; i--) {
-			dash.push("_");	
-		}
-		
+		var guess = "o";
 
 		var trafficlight = "g";
 
-		var j = word[0].split("");
+		var random = random();
 
+		var dash = dash(word , random);
 
+		var splitword = split(word , random);
 
-		var i = word.indexOf("e");
+		var right_i = correct_letter(splitword , guess);
 
-		console.log(i);
+		var replace = replace_dash(dash , right_i , guess);
 
-		console.log(j);
-
-
-/*		
-		while(trafficlight != "r") {
-
-			var user = prompt("Pick A Letter");
-
-			if (alphabet.indexOf(user) == -1) {
-				var user = prompt("Not Valid");
-
-			}
-
-			var i = [];
-			var idx = word.indexOf(user);
-
-			while(idx != -1){
-				i.push(idx);
-				idx = i.indexOf(user , idx + 1);
-			}
-
-			var newdash = dash.join(" ");
-
-			var html = "<p> Play Time</p>" + "<p>Game Board</p>" + newdash;
-
-	 		document.querySelector('#game').innerHTML = html;
-
-	 		trafficlight = prompt("g or r")
-
-	 		console.log(i);
-
-	 	}*/
-
-		console.log(word);
 		console.log(dash);
-		
+		console.log(splitword);
+		console.log(right_i);
+		console.log(replace);
+
+
+
+		var html = "<p> Play Time</p>" + "<p>Game Board</p>" + dash.join(" ");
+
+	 	document.querySelector('#game').innerHTML = html;
+
 
 	</script>
 
