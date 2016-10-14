@@ -8,83 +8,120 @@
 	<link rel = "icon" type = "image/ico" href = "assets/images/scissor1.ico">
 
 	<script type = "text/javascript" src = "assets/javascript/game.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 <body>
 
-	<div id = "game">
-			
-		<p>Time to Play</p>
 
+<div class="container">
+	
+	<div class="jumbotron">
+	  <h1 id = "highman">Hangman</h1>
+	  <p></p>
+	 
 	</div>
 
-	<div id = "wrongs">
-		
-		
+<div class="panel panel-default panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Instructions</h3>
+  </div>
+  <div class="panel-body">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum dui vitae sem pellentesque, eget condimentum lacus cursus. Nunc ullamcorper semper egestas. Nulla facilisi. Sed ut velit gravida, hendrerit erat eget, suscipit augue. Nulla malesuada et massa in aliquet. Mauris molestie felis ut eros egestas lacinia. Curabitur ullamcorper et erat.
+  </div>
+</div>
 
+</div>
+
+<div class = "row">
+	
+	<div class = "col-md-5 hi">
+		
 	</div>
 
-	<script type="text/javascript">
+	<div class = "col-md-5 hey">
 		
+	</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- 	<div id = "game">
 		
-		var word = select_word(word_choice);
-		var dashs = dash(word);
-	 	var split_word = split(word);
-	 	var fails = 0;
-	 	var wrongarray = [];
+	<p>Time to Play</p>
 
-		console.log(word);
-		console.log(dashs);
-		console.log(split_word);
-		
-		//var html = "<p> Play Time</p>" + "<p>Game Board</p>";
+</div>
 
-	 	//document.querySelector('#game').innerHTML = html;
+<div id = "wrongs">
+	
+	
 
-	 	document.onkeyup = function(event) {
+</div>
 
-	 		var user_guess = String.fromCharCode(event.keyCode).toLowerCase();
+<script type="text/javascript">
+	
+	
+	var word = select_word(word_choice);
+	var dashs = dash(word);
+ 	var split_word = split(word);
+ 	var fails = 0;
+ 	var wrongarray = [];
 
-	 		if (alphabet.indexOf(user_guess) > 0) {
+	console.log(word);
+	console.log(dashs);
+	console.log(split_word);
 
-		 		//console.log(user_guess);
+	var gameboard = "<p> Play Time</p>" + "<p>Game Board</p>" + dashs.join(" ");
 
-		 		var correct_guess = correct_letter(split_word , user_guess);
+	document.querySelector('#game').innerHTML = gameboard;
 
-		 		dashs = replace_dash(dashs , correct_guess , user_guess);
+ 	document.onkeyup = function(event) {
 
-		 		if (word.indexOf(user_guess) == -1) {
+ 		var user_guess = String.fromCharCode(event.keyCode).toLowerCase();
 
-		 			var index = alphabet.indexOf(user_guess);
-		 			alphabet.splice(index,1);
-		 			wrongarray.push(user_guess);
-		 			
+ 		if (alphabet.indexOf(user_guess) > 0) {
 
-		 			fails++;
+	 		//console.log(user_guess);
 
-		 		}
+	 		var correct_guess = correct_letter(split_word , user_guess);
 
-		 		console.log(wrongarray);
-		 		console.log(alphabet);
-		 		console.log(fails);
+	 		dashs = replace_dash(dashs , correct_guess , user_guess);
 
-		 		var gameboard = "<p> Play Time</p>" + "<p>Game Board</p>" + dashs.join(" ");
+	 		if (word.indexOf(user_guess) == -1) {
 
-		 		document.querySelector('#game').innerHTML = gameboard;
+	 			var index = alphabet.indexOf(user_guess);
+	 			alphabet.splice(index,1);
+	 			wrongarray.push(user_guess);
+	 			
 
-		 		var wrongs = "<p> Wrong Letters</p>" + wrongarray.join(" ");
+	 			fails++;
 
-		 		document.querySelector('#wrongs').innerHTML = wrongs;
+	 		var wrongs = "<p> Wrong Letters</p>" + wrongarray.join(" ");
 
-		 		//console.log(correct_guess);
-		 		//console.log(dashs);
+	 		document.querySelector('#wrongs').innerHTML = wrongs;
 
-		 	}
+	 		}
+
+	 		console.log(wrongarray);
+	 		console.log(alphabet);
+	 		console.log(fails);
+
+	 		var gameboard = "<p> Play Time</p>" + "<p>Game Board</p>" + dashs.join(" ");
+
+	 		document.querySelector('#game').innerHTML = gameboard;
 
 	 	}
 
+ 	}
 
-	</script>
+</script>
+ -->
 
 </body>
 </html>

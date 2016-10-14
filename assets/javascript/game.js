@@ -8,9 +8,9 @@ var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',
 		var trafficlight = "g";
 
 
-var word_choice = ["hi hi"]
+var word_choice = ["hey hey hey hey"]
 
-// Will return a random new
+// Will return a random number
 function random_number() {
 
 	var selection = Math.floor((Math.random(selection) * 1));
@@ -18,7 +18,6 @@ function random_number() {
 	return selection;
 
 }
-
 // Picks a random random word for a preset array of words
 function select_word(word_choice) {
 
@@ -40,7 +39,7 @@ function dash(word) {
 	for (var i = word.length - 1; i >= 0; i--) {
 
 		if (word[i] == " ") {
-			dash.push("\xa0")
+			dash.push("&nbsp;");
 		} else {
 			dash.push("_");	
 		}

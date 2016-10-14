@@ -1,0 +1,17 @@
+#highman {
+	text-align: center;
+}
+
+.hi {
+	background-color: grey;
+	margin-left: 83px;
+	margin-right: 50px;
+	height: 500px;
+	width: 550px;
+}
+
+.hey {
+	background-color: lightgrey;
+	height: 500px;
+	width: 535px;
+}
