@@ -18,38 +18,70 @@
 
 	</div>
 
+	<div id = "wrongs">
+		
+		
+
+	</div>
+
 	<script type="text/javascript">
 		
-/*		var word = ["hi" , "bye" , "hello" , "goodbye"];*/
 		
-		var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',            'p','q','r','s','t','u','v','w','x','y','z'];
- 
-		var word = ["hello"];
+		var word = select_word(word_choice);
+		var dashs = dash(word);
+	 	var split_word = split(word);
+	 	var fails = 0;
+	 	var wrongarray = [];
 
-		var guess = "o";
+		console.log(word);
+		console.log(dashs);
+		console.log(split_word);
+		
+		//var html = "<p> Play Time</p>" + "<p>Game Board</p>";
 
-		var trafficlight = "g";
+	 	//document.querySelector('#game').innerHTML = html;
 
-		var random = random();
+	 	document.onkeyup = function(event) {
 
-		var dash = dash(word , random);
+	 		var user_guess = String.fromCharCode(event.keyCode).toLowerCase();
 
-		var splitword = split(word , random);
+	 		if (alphabet.indexOf(user_guess) > 0) {
 
-		var right_i = correct_letter(splitword , guess);
+		 		//console.log(user_guess);
 
-		var replace = replace_dash(dash , right_i , guess);
+		 		var correct_guess = correct_letter(split_word , user_guess);
 
-		console.log(dash);
-		console.log(splitword);
-		console.log(right_i);
-		console.log(replace);
+		 		dashs = replace_dash(dashs , correct_guess , user_guess);
 
+		 		if (word.indexOf(user_guess) == -1) {
 
+		 			var index = alphabet.indexOf(user_guess);
+		 			alphabet.splice(index,1);
+		 			wrongarray.push(user_guess);
+		 			
 
-		var html = "<p> Play Time</p>" + "<p>Game Board</p>" + dash.join(" ");
+		 			fails++;
 
-	 	document.querySelector('#game').innerHTML = html;
+		 		}
+
+		 		console.log(wrongarray);
+		 		console.log(alphabet);
+		 		console.log(fails);
+
+		 		var gameboard = "<p> Play Time</p>" + "<p>Game Board</p>" + dashs.join(" ");
+
+		 		document.querySelector('#game').innerHTML = gameboard;
+
+		 		var wrongs = "<p> Wrong Letters</p>" + wrongarray.join(" ");
+
+		 		document.querySelector('#wrongs').innerHTML = wrongs;
+
+		 		//console.log(correct_guess);
+		 		//console.log(dashs);
+
+		 	}
+
+	 	}
 
 
 	</script>

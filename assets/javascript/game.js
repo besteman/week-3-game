@@ -1,4 +1,17 @@
-function random() {
+
+var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+ 
+		var word = ["hello"];
+
+		//var guess = "e";
+
+		var trafficlight = "g";
+
+
+var word_choice = ["hi hi"]
+
+// Will return a random new
+function random_number() {
 
 	var selection = Math.floor((Math.random(selection) * 1));
 
@@ -6,33 +19,52 @@ function random() {
 
 }
 
+// Picks a random random word for a preset array of words
+function select_word(word_choice) {
 
-function dash(word , selection) {
+
+	var number = random_number();
+
+	var select_word = word_choice[number];
+
+	return select_word;
+
+}
+
+// Makes an array of dashes for random word being guessed
+// It is dynamic 
+function dash(word) {
 
 	var dash = [];
 
-	for (var i = word[selection].length - 1; i >= 0; i--) {
+	for (var i = word.length - 1; i >= 0; i--) {
+
+		if (word[i] == " ") {
+			dash.push("\xa0")
+		} else {
 			dash.push("_");	
 		}
 
+	}
 
 	return dash;
 
 }
 
-
-function split(word , selection) {
+// Takes the random word and turns into another array
+// This array is the word split into its chars
+function split(word) {
 
 	var splitword = [];
 
-	splitword = word[selection].split("");
+	splitword = word.split("");
 
 
 	return splitword;
 
 }
 
-
+// Finds the index of the correctly guess letters
 function correct_letter(word , guess) {
 
 	var correct_letter = [];
@@ -43,7 +75,7 @@ function correct_letter(word , guess) {
 
 			correct_letter.push(i);
 
-		}
+		} 
 
 	}	
 
@@ -52,6 +84,7 @@ function correct_letter(word , guess) {
 }
 
 
+// Replaces the dashes with correct words
 function replace_dash(dash , right_i , guess) {
 
 
