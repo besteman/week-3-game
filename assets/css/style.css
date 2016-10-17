@@ -1,17 +1,75 @@
+body {
+
+	background-image:url("../images/hang3.jpeg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+
 #highman {
 	text-align: center;
 }
 
-.hi {
-	background-color: grey;
-	margin-left: 83px;
-	margin-right: 50px;
-	height: 500px;
-	width: 550px;
+#game  {
+
+	margin-left: 50px;
+	font-weight: bold;
+
 }
 
-.hey {
+
+#wrongs {
+
+	margin-left: 50px;
+
+}
+
+.insts {
+
+	margin-right: 50px;
+	font-weight: bold;
+	
+}
+
+.inst {
+
+	text-decoration: underline;
+	text-align: center;
+
+
+}
+
+.jumbo {
+
+	opacity: 0.5;
+
+}
+
+.paneltitle {
+
+	opacity: 0.5;
+
+
+}
+
+
+
+
+.hi {
+	opacity: 0.5;
 	background-color: lightgrey;
 	height: 500px;
-	width: 535px;
+	width: 50%;
+
 }
+
+.loss {
+	text-decoration-color: yellow;
+
+	margin-top: 125px;
+	margin-right: 0px;
+}
+
+
+

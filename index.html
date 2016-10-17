@@ -11,117 +11,72 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+	
+
 </head>
 <body>
 
 
+
 <div class="container">
 	
-	<div class="jumbotron">
+	<div class="jumbotron jumbo">
 	  <h1 id = "highman">Hangman</h1>
 	  <p></p>
 	 
 	</div>
 
-<div class="panel panel-default panel-success">
-  <div class="panel-heading">
-    <h3 class="panel-title">Instructions</h3>
-  </div>
-  <div class="panel-body">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum dui vitae sem pellentesque, eget condimentum lacus cursus. Nunc ullamcorper semper egestas. Nulla facilisi. Sed ut velit gravida, hendrerit erat eget, suscipit augue. Nulla malesuada et massa in aliquet. Mauris molestie felis ut eros egestas lacinia. Curabitur ullamcorper et erat.
-  </div>
-</div>
 
-</div>
 
-<div class = "row">
+
+<div class="row">
 	
-	<div class = "col-md-5 hi">
+	<div class = "center-block hi">
+
+		<div id = "game" class="pull-left">
 		
+			<p>Play Time</p>
+
+			<script type="text/javascript">main_game();</script>
+			
+
+		</div>
+
+		<div id = "wrongs" class="pull-left">
+			
+		
+
+		</div>
+
+		<div class="pull-right insts">
+
+			<p class="inst">Instructions</p>
+
+			<p>Click Any Letter to Start</p>
+
+		</div>
+
+		<div class="row">
+	
+			<div id = "loss" class="col-md-2 loss">
+		
+			</div>
+
+		</div>
+
+		<div id="play_again" class="col-md-4 play_again">
+			
+			
+
+		</div>
+
 	</div>
 
-	<div class = "col-md-5 hey">
-		
-	</div>
+
 
 </div>
 
-
-
-
-
-
-
-<!-- 	<div id = "game">
-		
-	<p>Time to Play</p>
-
 </div>
-
-<div id = "wrongs">
-	
-	
-
-</div>
-
-<script type="text/javascript">
-	
-	
-	var word = select_word(word_choice);
-	var dashs = dash(word);
- 	var split_word = split(word);
- 	var fails = 0;
- 	var wrongarray = [];
-
-	console.log(word);
-	console.log(dashs);
-	console.log(split_word);
-
-	var gameboard = "<p> Play Time</p>" + "<p>Game Board</p>" + dashs.join(" ");
-
-	document.querySelector('#game').innerHTML = gameboard;
-
- 	document.onkeyup = function(event) {
-
- 		var user_guess = String.fromCharCode(event.keyCode).toLowerCase();
-
- 		if (alphabet.indexOf(user_guess) > 0) {
-
-	 		//console.log(user_guess);
-
-	 		var correct_guess = correct_letter(split_word , user_guess);
-
-	 		dashs = replace_dash(dashs , correct_guess , user_guess);
-
-	 		if (word.indexOf(user_guess) == -1) {
-
-	 			var index = alphabet.indexOf(user_guess);
-	 			alphabet.splice(index,1);
-	 			wrongarray.push(user_guess);
-	 			
-
-	 			fails++;
-
-	 		var wrongs = "<p> Wrong Letters</p>" + wrongarray.join(" ");
-
-	 		document.querySelector('#wrongs').innerHTML = wrongs;
-
-	 		}
-
-	 		console.log(wrongarray);
-	 		console.log(alphabet);
-	 		console.log(fails);
-
-	 		var gameboard = "<p> Play Time</p>" + "<p>Game Board</p>" + dashs.join(" ");
-
-	 		document.querySelector('#game').innerHTML = gameboard;
-
-	 	}
-
- 	}
-
-</script>
- -->
 
 </body>
 </html>
