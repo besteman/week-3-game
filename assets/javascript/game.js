@@ -126,7 +126,7 @@ function win(won_counter){
 
 	$("#play_again").html("<p>Woud you like to play again</p>" + "<p>y or n</p>");
 	var won = "<p>You Won!!!!</p><br>" + won_counter;
-	document.querySelector("#loss").innerHTML = won;
+	document.querySelector("#wins").innerHTML = won;
 	$("#play_again").html("<p>Woud you like to play again</p>" + "<p>y or n</p>");
 
 	document.onkeyup = function(e) {
@@ -220,9 +220,6 @@ function main_game() {
 
 	 		if(dashs.indexOf("_") == -1 ){
 
-	 				var won = "<p>You Won!!!!</p><br>" + won_counter;
-
-					document.querySelector("#loss").innerHTML = won;
 
 
 							/*word = select_word(word_choice);
