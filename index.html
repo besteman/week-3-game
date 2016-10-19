@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-	
+	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -22,18 +22,20 @@
 	
 	<div class="jumbotron jumbo">
 	  <h1 id = "highman">Hangman</h1>
-	  <p></p>
+	  <p class="center">Instruction: Please any letter to start</p>
 	 
 	</div>
 
 
 
 
-<div class="row">
+
 	
 	<div class = "center-block hi">
 
-		<div id = "game" class="pull-left">
+	<div class="row">
+
+		<div id = "game" class="pull-left col-md-10">
 		
 			<p>Play Time</p>
 
@@ -42,31 +44,37 @@
 
 		</div>
 
-		<div id = "wrongs" class="pull-left">
+
+		<div id = "wrongs" class="pull-left col-md-3">
 			
-		
-
 		</div>
 
-		<div class="pull-right insts">
+	
 
-			<p class="inst">Instructions</p>
-
-			<p>Click Any Letter to Start</p>
-
-		</div>
+	</div>
 
 		<div class="row">
+
+
 	
-			<div id = "loss" class="col-md-2 loss">
-		
+			<div id="play_again" class="col-md-3 play_again">
+				
+				
+
 			</div>
+
+		
+
+		<div id = "loss" class="col-md-5 pull-right">
+			
+			<img id="skull-image" src="assets/images/skull.png">
 
 		</div>
 
-		<div id="play_again" class="col-md-4 play_again">
+		<div id = "wins" class="col-md-2">
 			
-			
+
+		</div>
 
 		</div>
 
@@ -76,7 +84,7 @@
 
 </div>
 
-</div>
+
 
 </body>
 </html>

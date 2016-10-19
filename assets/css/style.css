@@ -5,6 +5,10 @@ body {
 	background-position: center;
 }
 
+#skull-image {
+	display: none;
+}
+
 
 
 #highman {
@@ -13,29 +17,32 @@ body {
 
 #game  {
 
-	margin-left: 50px;
+	margin-left: 5px;
 	font-weight: bold;
+	width: 300px;
+	margin-top: 20px;
+	margin-right: 100px;
 
 }
 
 
 #wrongs {
 
-	margin-left: 50px;
+	margin-left: 40px;
+	height: 100px;
+
+	margin-bottom: 60px;
+	margin-top: 20px;
 
 }
 
-.insts {
 
-	margin-right: 50px;
-	font-weight: bold;
-	
-}
 
 .inst {
 
 	text-decoration: underline;
 	text-align: center;
+	margin-top: 20px;
 
 
 }
@@ -53,23 +60,30 @@ body {
 
 }
 
+.play_again {
 
+
+ margin-left: 50px;
+
+
+}
 
 
 .hi {
-	opacity: 0.5;
+	opacity: 0.8;
 	background-color: lightgrey;
 	height: 500px;
 	width: 50%;
 
 }
 
-.loss {
-	text-decoration-color: yellow;
+#loss {
 
-	margin-top: 125px;
-	margin-right: 0px;
+	margin-right: 125px;
+	margin-bottom: -900px;
+
 }
 
-
-
+.center{
+	text-align: center;
+}
